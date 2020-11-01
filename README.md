@@ -18,8 +18,12 @@ Now take a look at the [Quickstart][quickstart] section. This section will link 
 documentation on how to [Create a Bot Account][create-account]. Don't forget to save
 your bot token.
 
-Once you've created your own project and downloaded it to your computer, you will need
-to add an `authsecrets.py` file in the same directory as this `README.md` file.
+You can use this project as a [template][template] to create your own bot. Once you've
+got your own copy of the project, you'll need to [clone][clone] it onto your own
+computer.
+
+Now, you need to add an `authsecrets.py` file in the same directory as this `README.md`
+file.
 
 The contents of the `authsecrets.py` file should look like this:
 
@@ -34,7 +38,9 @@ docker build --tag discord-py-quickstart:latest .
 docker run --rm discord-py-quickstart:latest
 ```
 
+[clone]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 [create-account]: https://discordpy.readthedocs.io/en/latest/discord.html#discord-intro
 [discord.py]: https://discordpy.readthedocs.io/en/latest/index.html
 [intro]: https://discordpy.readthedocs.io/en/latest/intro.html
 [quickstart]: https://discordpy.readthedocs.io/en/latest/quickstart.html
+[template]: https://github.com/binduwavell/discord-py-quickstart/generate
