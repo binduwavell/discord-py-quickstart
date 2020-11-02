@@ -128,9 +128,9 @@ docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart
 docker run -it --rm -v %CD%\src:/usr/src/app discord-py-quickstart
 ```
 
-There are some more official Docker images for discord.py [here][docker].
-
 </summary>
+
+There are some more official Docker images for discord.py [here][docker].
 
 [clone]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 [create-account]: https://discordpy.readthedocs.io/en/latest/discord.html#discord-intro
