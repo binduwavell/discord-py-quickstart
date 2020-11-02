@@ -39,7 +39,7 @@ BOT_TOKEN='paste your bot token here'
 Setup a python virtual environment, and then install the required dependencies:
 
 <details>
-<summary>\*nix</summary>
+<summary>Mac/Unix</summary>
 
 ```shell
 python3 -m venv .env
@@ -93,7 +93,7 @@ Docker container. This then allows interactive development without
 relying on a local install of python.
 
 <details>
-<summary>\*nix</summary>
+<summary>Mac/Unix</summary>
 
 ```
 docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart:latest
