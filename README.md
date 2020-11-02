@@ -16,6 +16,12 @@ As an alternative to this project, there is a way to have discord.py stamp out a
 very basic bot for you.
 
 ```shell
+python -m discord newbot
+```
+
+<details><summary>newbot usage</summary>
+
+```shell
 > python -m discord newbot -h
 usage: discord newbot [-h] [--prefix <prefix>] [--sharded] [--no-git] name [directory]
 
@@ -29,6 +35,8 @@ optional arguments:
   --sharded          whether to use AutoShardedBot
   --no-git           do not create a .gitignore file
 ```
+
+</details>
 
 ## Getting Started
 
