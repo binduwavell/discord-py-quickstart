@@ -1,6 +1,7 @@
 # discord-py-quickstart
 
-You can use this project to [create][template] your own basic [discord.py][discord.py] bot project.
+You can use this project to [create][template] your own basic
+[discord.py][discord.py] bot project.
 
 This project sets up Python logging. It includes several extensions that can
 load and unload cogs. These extensions include simple examples of:
@@ -9,6 +10,25 @@ load and unload cogs. These extensions include simple examples of:
 * A command handler - ping/pong
 * Hot reloading - attempts to reload extensions when you save an edit
 * A way to reference secrets without checking them into source control
+* How to use Docker to run your bot
+
+As an alternative to this project, there is a way to have discord.py stamp out a new
+very basic bot for you.
+
+```shell
+> python -m discord newbot -h
+usage: discord newbot [-h] [--prefix <prefix>] [--sharded] [--no-git] name [directory]
+
+positional arguments:
+  name               the bot project name
+  directory          the directory to place it in (default: .)
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --prefix <prefix>  the bot prefix (default: $)
+  --sharded          whether to use AutoShardedBot
+  --no-git           do not create a .gitignore file
+```
 
 ## Getting Started
 
