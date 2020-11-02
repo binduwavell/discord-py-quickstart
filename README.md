@@ -50,7 +50,7 @@ computer.
 Now, you need to add an `authsecrets.py` file in the src directory. The contents of
 this file should look like this:
 
-```
+```python
 BOT_TOKEN='paste your bot token here'
 ```
 
@@ -102,9 +102,9 @@ to not need to manage installing a C++ compiler. For a production
 deployment you will likely want to create an image based on a more
 streamlined base image.
 
-```
-docker build --tag discord-py-quickstart:latest .
-docker run -it --rm discord-py-quickstart:latest
+```shell
+docker build --tag discord-py-quickstart .
+docker run -it --rm discord-py-quickstart
 ```
 
 If you don't wish to use a local install of python, it is possible to
@@ -115,8 +115,8 @@ relying on a local install of python.
 <details>
 <summary>Mac/Unix</summary>
 
-```
-docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart:latest
+```shell
+docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart
 ```
 
 </details>
@@ -124,11 +124,11 @@ docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart:latest
 <details>
 <summary>Windows</summary>
 
-```
-docker run -it --rm -v %CD%\src:/usr/src/app discord-py-quickstart:latest
+```shell
+docker run -it --rm -v %CD%\src:/usr/src/app discord-py-quickstart
 ```
 
-There are some more official Docker images for discord.py [here]docker].
+There are some more official Docker images for discord.py [here][docker].
 
 </summary>
 
