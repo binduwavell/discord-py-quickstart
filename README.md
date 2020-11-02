@@ -38,7 +38,8 @@ BOT_TOKEN='paste your bot token here'
 
 Setup a python virtual environment, and then install the required dependencies:
 
-<details><summary>\*nix</summary>
+<details>
+<summary>\*nix</summary>
 
 ```shell
 python3 -m venv .env
@@ -47,7 +48,9 @@ pip install -r requirements.txt
 ```
 
 </details>
-<details><summary>Windows</summary>
+
+<details>
+<summary>Windows</summary>
 
 ```shell
 python3 -m venv .env
@@ -89,14 +92,17 @@ live mount the source code of this project with a volume into the
 Docker container. This then allows interactive development without
 relying on a local install of python.
 
-<details<summary>\*nix</summary>
+<details>
+<summary>\*nix</summary>
 
 ```
 docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart:latest
 ```
 
 </details>
-<details><summary>Windows</summary>
+
+<details>
+<summary>Windows</summary>
 
 ```
 docker run -it --rm -v %CD%\src:/usr/src/app discord-py-quickstart:latest
