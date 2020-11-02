@@ -103,8 +103,8 @@ deployment you will likely want to create an image based on a more
 streamlined base image.
 
 ```shell
-docker build --tag discord-py-quickstart:latest .
-docker run -it --rm discord-py-quickstart:latest
+docker build --tag discord-py-quickstart .
+docker run -it --rm discord-py-quickstart
 ```
 
 If you don't wish to use a local install of python, it is possible to
@@ -116,7 +116,7 @@ relying on a local install of python.
 <summary>Mac/Unix</summary>
 
 ```shell
-docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart:latest
+docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart
 ```
 
 </details>
@@ -125,7 +125,7 @@ docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart:latest
 <summary>Windows</summary>
 
 ```shell
-docker run -it --rm -v %CD%\src:/usr/src/app discord-py-quickstart:latest
+docker run -it --rm -v %CD%\src:/usr/src/app discord-py-quickstart
 ```
 
 </details>
