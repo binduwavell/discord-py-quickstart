@@ -13,7 +13,7 @@ class Utilities(commands.Cog):
   @commands.command()
   async def ping(self, message: discord.Message):
     """You say ?ping and the bot will reply Pong!"""
-    await message.channel.send('Pong!')
+    await message.channel.send('Pong! XYZ')
 
 
 def setup(bot: commands.Bot):

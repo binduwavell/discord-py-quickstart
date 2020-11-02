@@ -1,42 +1,108 @@
 # discord-py-quickstart
 
-You can use this project to create your own basic [discord.py][discord.py] bot project.
+You can use this project to [create][template] your own basic [discord.py][discord.py] bot project.
 
 This project sets up Python logging. It includes several extensions that can
 load and unload cogs. These extensions include simple examples of:
 
-* A listener (log a little info about each message)
-* A command handler (ping)
-* Hot reloading
+* A listener - log a little info about each member message
+* A command handler - ping/pong
+* Hot reloading - attempts to reload extensions when you save an edit
 * A way to reference secrets without checking them into source control
 
 ## Getting Started
 
-Check out the [Introduction][intro] from the [discord.py][discord.py] documentation.
+Check out the [Introduction][intro] in the [discord.py][discord.py] documentation.
 
 Now take a look at the [Quickstart][quickstart] section. This section will link to the
 documentation on how to [Create a Bot Account][create-account]. Don't forget to save
 your bot token.
 
+NOTE: This assumes you have `git`, a version of `python3` (version 3.5.3 or higher)
+and a c/c++ compiler that python can use to to compile native modules on your
+computer. If necessary you can run the bot in a Docker container that has python3
+and a c/c++ compiler. Instructions later in this doc.
+
 You can use this project as a [template][template] to create your own bot. Once you've
 got your own copy of the project, you'll need to [clone][clone] it onto your own
 computer.
 
-Now, you need to add an `authsecrets.py` file in the same directory as this `README.md`
-file.
-
-The contents of the `authsecrets.py` file should look like this:
+Now, you need to add an `authsecrets.py` file in the src directory. The contents of
+this file should look like this:
 
 ```
 BOT_TOKEN='paste your bot token here'
 ```
 
+## Local development
+
+Setup a python virtual environment, and then install the required dependencies:
+
+<details><summary>\*nix</summary>
+
+```shell
+python3 -m venv .env
+source .env/Scripts/activate
+pip install -r requirements.txt
+```
+
+</details>
+<details><summary>Windows</summary>
+
+```shell
+python3 -m venv .env
+.env/Scripts/activate.exe
+pip install -r requirements.txt
+```
+
+</details>
+
+Once you have things setup you can start the bot like this:
+
+```shell
+python src/bot.py
+```
+
+With the hot reloading feature, you should be able to make edits to
+the existing command and the changes should be picked up when you
+save your file. If you add or remove commands, you will need to
+restart the bot.
+
+If you start a new shell you will need to re-activate the virtual
+environment with the activate script.
+
 ## Building and running with Docker
+
+Following are some basic instructions for creating a Docker image that
+will run your bot. This uses a rather heavy python base image in order
+to not need to manage installing a C++ compiler. For a production
+deployment you will likely want to create an image based on a more
+streamlined base image.
 
 ```
 docker build --tag discord-py-quickstart:latest .
-docker run --rm discord-py-quickstart:latest
+docker run -it --rm discord-py-quickstart:latest
 ```
+
+If you don't wish to use a local install of python, it is possible to
+live mount the source code of this project with a volume into the
+Docker container. This then allows interactive development without
+relying on a local install of python.
+
+<details<summary>\*nix</summary>
+
+```
+docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart:latest
+```
+
+</details>
+<details><summary>Windows</summary>
+
+```
+docker run -it --rm -v %CD%\src:/usr/src/app discord-py-quickstart:latest
+```
+
+</summary>
 
 [clone]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 [create-account]: https://discordpy.readthedocs.io/en/latest/discord.html#discord-intro

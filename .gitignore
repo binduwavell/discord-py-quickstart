@@ -1,3 +1,3 @@
 __pycache__
-authsecrets.py
-bot-env/Lib/
+src/authsecrets.py
+.env/
