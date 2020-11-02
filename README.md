@@ -128,7 +128,7 @@ docker run -it --rm -v $PWD/src:/usr/src/app discord-py-quickstart
 docker run -it --rm -v %CD%\src:/usr/src/app discord-py-quickstart
 ```
 
-</summary>
+</details>
 
 There are some more official Docker images for discord.py [here][docker].
 
